@@ -1,0 +1,45 @@
+name = input("Type your name ")
+print("Welcome to tresure island " + name)
+print("your mission is to find the tresure.")
+
+cross_road = input("you're at a cross road. Where do you want to go? Type left or right ").lower()
+
+if cross_road == "left":
+    cross_road = input("You find a lake. Take a dive or walk around? Type dive/walk ").lower()
+
+    if cross_road == "dive":
+        print("You dive into the water then get carried to the other side on a dolfine, then get eaten by a dolfine")
+    elif cross_road == "walk":
+        print("You walked across many miles and died of exaustion.")
+    else:
+        print("not a valid answer. you lose")
+
+elif cross_road == "right":
+    cross_road = input("You com across a bridge and it look sketchy. Do you cross or head back? Type cross/back ").lower()
+
+    if cross_road == "back":
+        print("You go back and lose")
+    elif cross_road == "cross":
+        cross_road = input("you cross a bridge and meet a stranger. Talk to him or keep moving on? Type talk/move ").lower()
+
+        if cross_road == "talk":
+            cross_road = input("He gives you a map leading you to the tresure. You can go to the valle or the mountains where do you go? Type mountains/valle ").lower()
+
+            if cross_road == "mountain":
+                print("You start climbing the mountain you then find a mountain lion and it kills you.")
+            elif cross_road == "valle":
+                print("You go down to the valle you come to a big temple and find the tresure!!")
+            else:
+                print("Not a valid option. You lose")
+        elif cross_road == "move":
+            print("You ignore the stranger and he are offended. He shoots you and you die.")
+        else:
+            print("Not a valid option. You lose")
+
+    else:
+        print("Not a valid option. You lose")
+
+else:
+    print("Not a valid option. You lose")
+
+print("Thank you for playing", name)
